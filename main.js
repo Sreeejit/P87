@@ -22,11 +22,12 @@ canvas.add(player_object)
 
 
 function new_image(get_img){
+    console.log("Img")
     fabric.Image.fromURL(get_img, function(Img){
      block_object = Img;
     
-    block_object.scaleToWidth(SpanW);
-    block_object.scaleToHeight(SpanH);
+    block_object.scaleToWidth(block_img_width);
+    block_object.scaleToHeight(block_img_height);
     block_object.set({
     top:player_y,
     left:player_x
@@ -38,7 +39,7 @@ function new_image(get_img){
 
 
     function mykeydown(e){
-keyPressed = e.keycode;
+keyPressed = e.keyCode;
 console.log(keyPressed);
 
 
